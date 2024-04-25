@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <p id="one">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta vitae et <b>one</b> natus corporis atque expedita modi provident magnam in eaque!</p>
+    <button id="btn-1">get text</button>
+    <button id="btn-2">get html</button>
+    <button id="hidee">hide</button>
+    
+    <input type="input " id="inp" value="xyz">
+    <button id="Valuee" >show value</button>
+
+    <a href="https://www.google.com/"  id="TWO">click TO HERE</a>
+    <button id="THREE">SHOW LINK</button>
+    
+</body>
+<script>
+
+$(document).ready(function () {
+    $("#btn-1").click (function () {
+        alert($("#one").text())
+        
+    })
+
+  
+    $("#btn-2").click (function () {
+       alert ($("#one").html())
+        
+    })
+
+   
+    $("#hidee").click (function () {
+        ($("#one").hide())
+        
+    })
+
+    
+    $("#Valuee").click (function () {
+       alert ($("#xyz").val())
+        
+    })
+
+    $("#THREE").click (function () {
+       alert ($("#TWO").attr("href"))
+        
+    })
+    
+
+        
+    
+})
+</script>
+</html>
