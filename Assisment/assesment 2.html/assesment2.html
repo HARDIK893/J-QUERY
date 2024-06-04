@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hamburger Menu</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.menu ul li a:hover {
+  color: #666;
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f2f2f2;
+    padding: 10px 0;
+  }
+
+  .menu ul {
+    text-align: center;
+  }
+
+  .menu ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+
+  .hamburger {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+  }
+}
+
+</style>
+<body>
+  <div class="menu-toggle">
+    <div class="hamburger"></div>
+  </div>
+  <nav class="menu">
+    <ul>
+      <li><a href="#men">Men</a></li>
+      <li><a href="#women">Women</a></li>
+      <li><a href="#children">Children</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+  </nav>
+  <section id="men">
+    <h2>Men's Section</h2>
+    <!-- Content for men's section -->
+  </section>
+  <section id="women">
+    <h2>Women's Section</h2>
+    <!-- Content for women's section -->
+  </section>
+  <section id="children">
+    <h2>Children's Section</h2>
+    <!-- Content for children's section -->
+  </section>
+  <section id="faq">
+    <h2>FAQ</h2>
+    <!-- FAQ content -->
+  </section>
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <!-- Contact form or information -->
+  </section>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+</body>
+<script>
+    $(document).ready(function(){
+  $('.menu-toggle').click(function(){
+    $('.menu').slideToggle();
+  });
+});
+
+  </script>
+</html>

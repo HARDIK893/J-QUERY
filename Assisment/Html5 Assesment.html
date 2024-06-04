@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Header</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #463ab6;
+  color: #fff;
+}
+
+.logo-section img {
+  width: 100px; /* Adjust according to your logo size */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #fff;
+}
+
+nav ul li:hover > ul {
+  display: block;
+}
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  background-color: #41b3ca;
+  
+}
+
+nav ul ul li {
+  width: 200px;
+  text-align: left;
+}
+
+.login-section a {
+  padding: 10px 15px;
+  background-color: #fff;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.login-section a:hover{
+    padding: 10px 15px;
+  background-color: #e3f68de0;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.sub-submenu{
+    margin-left: 200px;
+    position: absolute;
+    top: 1px;
+   
+    
+}
+
+</style>
+<body>
+  <header>
+    <div class="logo-section">
+      <img src="logo.png" alt="Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services
+            <i class="fa-solid fa-chevron-down"></i>
+        </a>
+          <ul class="submenu">
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Marketing</a></li>
+            <li><a href="#">Development</a></li>
+            <li><a href="#">More
+                <i class="fa-solid fa-caret-right"></i>
+            </a>
+              <ul class="sub-submenu">
+                <li><a href="#"  style="background-color: orange; text-align: center;">HTML</a></li>
+                <li><a href="#" style="background-color: rgb(83, 188, 209); text-align: center;">CSS</a></li>
+                <li><a href="#"  style="background-color: rgb(237, 235, 108); text-align: center;">JavaScript</a></li>
+                <li><a href="#" style="background-color: #333; color: #ffffff; text-align: center;">J-Query</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="login-section a">
+      <a href="#">Log In</a>
+    </div>
+  </header>
+</body>
+</html>
